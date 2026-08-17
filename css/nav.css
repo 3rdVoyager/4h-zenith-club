@@ -52,11 +52,6 @@ header .logo-subtitle {
 }
 
 header .site-nav {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
   min-width: 0;
 }
 
@@ -139,6 +134,33 @@ header .site-nav ul li a::after {
 header .site-nav ul li a:hover::after,
 header .site-nav ul li a.active::after {
   transform: scaleX(1);
+}
+
+@media (min-width: 1600px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  header .logo-container {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  header .site-nav {
+    display: contents;
+  }
+
+  header .site-nav ul {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  header .header-actions {
+    grid-column: 3;
+    justify-self: end;
+  }
 }
 
 @media (max-width: 1600px) {
