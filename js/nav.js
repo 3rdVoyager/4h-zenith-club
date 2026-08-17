@@ -35,5 +35,54 @@ header.querySelectorAll("nav ul a").forEach((link) => {
 });
 
 footer.innerHTML = `
-      <p>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
+      <div class="footer-main">
+        <div class="footer-column footer-brand">
+          <a href="/" class="footer-logo-link">
+            <img
+              class="footer-logo"
+              src="/assets/images/4h-logo.png"
+              alt="4-H Zenith Club logo"
+            />
+            <span class="footer-logo-text">4-H Zenith Club</span>
+          </a>
+          <p class="footer-tagline">Head &bull; Heart &bull; Hands &bull; Health</p>
+          <p class="footer-description">
+            A community of homeschooling 4-H families growing together through
+            hands-on projects, leadership, and service.
+          </p>
+        </div>
+
+        <nav class="footer-column" aria-label="Site navigation">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/programs/">Programs</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-label="Get involved">
+          <h2 class="footer-heading">Get Involved</h2>
+          <ul class="footer-links">
+            <li><a href="/join/">Join Zenith</a></li>
+            <li><a href="/members/">Members</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-column">
+          <h2 class="footer-heading">Meet With Us</h2>
+          <ul class="footer-info">
+            <li>Second Friday of each month</li>
+            <li>3:00&ndash;5:00 PM</li>
+            <li>Gaithersburg &amp; Derwood, MD</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
+      </div>
     `;

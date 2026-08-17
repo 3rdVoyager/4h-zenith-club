@@ -79,13 +79,16 @@
   /* ── Layout ──────────────────────────────────────────── */
   --page-padding-x: 5vw;
   --page-padding-y: var(--space-md);
-  --section-padding-y: calc(var(--space-xxl) * 2);
+  --section-padding-y: calc(var(--space-xxl) * 1.5);
   --section-padding-x: var(--space-lg);
   --section-content-padding: var(--space-md);
   --section-grid-gap: var(--space-sm);
   --content-gap: var(--space-sm);
   --header-padding: var(--space-sm);
-  --footer-padding: var(--space-lg);
+  --footer-padding-y: var(--space-xl);
+  --footer-column-gap: var(--space-xl);
+  --footer-logo-size: 3.5rem;
+  --footer-bg-color: var(--header-bg-color);
 
   --logo-size: 75px;
   --header-height: calc(var(--logo-size) + 2 * var(--header-padding));
