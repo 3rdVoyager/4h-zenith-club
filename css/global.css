@@ -1,0 +1,16 @@
+h1 {
+    font-size: calc(var(--base-font-size) * 2);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: calc(var(--base-font-size) * 1.5);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+p {
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+}

@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --tertiary-color: #000000;
+    --accent-color: #000000;
+
+    --button-primary-color: #000000;
+    --button-secondary-color: #ffffff;
+    --button-tertiary-color: #000000;
+
+    --border-color: #000000;
+    --section-bg-color: #8becbb;
+    --section-padding: 1rem;
+    --section-margin: 1rem;
+    --header-bg-color: #ffffff;
+    --header-text-color: #000000;
+    --base-font-size: 1.25rem;
+    --text-color: #000000;
+    --header-height: 69.33px;
+    --site-bg-color-primary: #205700;
+    --site-bg-color-secondary: #143401;
+    --shadow-color: #000000;
+}
