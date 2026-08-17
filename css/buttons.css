@@ -1,15 +1,16 @@
+/* ── Base button styles ────────────────────────────────── */
 button,
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
-  padding: 0.75rem 1.75rem;
+  gap: var(--space-2xs);
+  padding: var(--button-padding-y) var(--button-padding-x);
   border-radius: var(--button-radius);
-  border: 1px solid var(--button-border-color);
+  border: var(--border-width-thin) solid var(--button-border-color);
   box-shadow: var(--button-shadow);
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   font-family: var(--body-font);
   letter-spacing: var(--button-letter-spacing);
@@ -18,21 +19,23 @@ button,
   text-align: center;
   line-height: 1.2;
   transition:
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
+/* ── Size variants ─────────────────────────────────────── */
 .button-small {
-  padding: 0.5rem 1.25rem;
-  font-size: 0.75rem;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-xs);
 }
 
 .button-large {
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
+  padding: var(--space-sm) 2.5rem;
+  font-size: var(--font-size-base);
 }
 
+/* ── Color variants ────────────────────────────────────── */
 .button-primary {
   background-color: var(--button-primary-color);
   color: var(--text-color-light);
@@ -40,7 +43,7 @@ button,
 
 .button-primary:hover {
   background-color: var(--button-primary-hover-color);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--button-shadow-hover);
 }
 
 .button-secondary {
@@ -50,5 +53,5 @@ button,
 
 .button-secondary:hover {
   background-color: var(--button-secondary-hover-color);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--button-shadow-hover);
 }

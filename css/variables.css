@@ -1,54 +1,100 @@
 :root {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --accent-color: #000000;
+  /* ── Color palette ───────────────────────────────────── */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-800: #333333;
 
-    --button-primary-color: #20603e;
-    --button-primary-hover-color: #184a30;
-    --button-secondary-color: #f2efe4;
-    --button-secondary-hover-color: #e8e4d8;
-    --button-border-color: #143401;
-    --button-radius: 0.5rem;
-    --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    --button-letter-spacing: 0.08em;
+  --color-green-900: #143401;
+  --color-green-800: #184a30;
+  --color-green-700: #1c5135;
+  --color-green-600: #205700;
+  --color-green-500: #20603e;
 
-    --border-color: #000000;
+  --color-cream-100: #f9f7f1;
+  --color-cream-200: #f2efe4;
+  --color-cream-300: #e8e4d8;
 
-    --section-bg-color: #f2efe4;
+  /* ── Semantic colors ─────────────────────────────────── */
+  --text-color-dark: var(--color-black);
+  --text-color-light: var(--color-white);
+  --text-color-muted: var(--color-gray-800);
 
-    --logo-color: #1c5135;
+  --site-bg-color: var(--color-cream-200);
+  --section-bg-color: var(--color-cream-200);
+  --header-bg-color: var(--color-cream-100);
+  --header-border-color: rgba(20, 52, 1, 0.15);
 
-    /* Spacing scale */
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
+  --border-color: var(--color-black);
+  --logo-color: var(--color-green-700);
 
-    /* Page horizontal inset (header, main, footer) */
-    --page-padding-x: 5vw;
-    --page-padding-y: var(--space-md);
-    --section-padding: var(--space-lg);
-    --section-gap: var(--space-xl);
-    --section-grid-gap: var(--space-sm);
-    --content-gap: var(--space-sm);
-    --header-padding: var(--space-sm);
-    --footer-padding: var(--space-lg);
+  --nav-link-color: var(--text-color-muted);
+  --nav-link-active-color: var(--color-green-500);
 
-    --header-bg-color: #f9f7f1;
-    --header-text-color: #000000;
-    --header-border-color: rgba(20, 52, 1, 0.15);
-    --nav-link-color: #333333;
-    --nav-link-active-color: var(--button-primary-color);
-    --base-font-size: 1.25rem;
-    --text-color-dark: #000000;
-    --text-color-light: #ffffff;
-    --header-height: calc(75px + 2 * var(--space-sm));
-    --site-bg-color-primary: #205700;
-    --site-bg-color-secondary: #143401;
-    --shadow-color: #000000;
-    --site-bg-color: #f2efe4;
+  --button-primary-color: var(--color-green-500);
+  --button-primary-hover-color: var(--color-green-800);
+  --button-secondary-color: var(--color-cream-200);
+  --button-secondary-hover-color: var(--color-cream-300);
+  --button-border-color: var(--color-green-900);
 
-    --heading-font: "Libre Baskerville", serif;
-    --body-font: "Lato", sans-serif;
-    --logo-font: "Montserrat", sans-serif;
+  /* Brand accents (reserved for future hero/gradient use) */
+  --brand-green-primary: var(--color-green-600);
+  --brand-green-dark: var(--color-green-900);
+
+  /* ── Typography ──────────────────────────────────────── */
+  --heading-font: "Libre Baskerville", serif;
+  --body-font: "Lato", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 2rem;
+
+  --base-font-size: var(--font-size-md);
+  --heading-scale-h1: 2;
+  --heading-scale-h2: 1.5;
+  --heading-scale-h3: 1.25;
+
+  --letter-spacing-tight: 0.02em;
+  --letter-spacing-wide: 0.08em;
+
+  /* ── Spacing scale ───────────────────────────────────── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* ── Layout ──────────────────────────────────────────── */
+  --page-padding-x: 5vw;
+  --page-padding-y: var(--space-md);
+  --section-padding: var(--space-lg);
+  --section-gap: var(--space-xl);
+  --section-grid-gap: var(--space-sm);
+  --content-gap: var(--space-sm);
+  --header-padding: var(--space-sm);
+  --footer-padding: var(--space-lg);
+
+  --logo-size: 75px;
+  --header-height: calc(var(--logo-size) + 2 * var(--header-padding));
+  --z-header: 1000;
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --border-width-thin: 1px;
+  --border-width-thick: 3px;
+  --nav-underline-height: 3px;
+  --nav-underline-offset: 4px;
+
+  /* ── Buttons ─────────────────────────────────────────── */
+  --button-radius: 0.5rem;
+  --button-padding-y: 0.75rem;
+  --button-padding-x: 1.75rem;
+  --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  --button-shadow-hover: 0 3px 8px rgba(0, 0, 0, 0.16);
+  --button-letter-spacing: var(--letter-spacing-wide);
+
+  /* ── Effects ─────────────────────────────────────────── */
+  --transition-fast: 0.2s ease-in-out;
 }

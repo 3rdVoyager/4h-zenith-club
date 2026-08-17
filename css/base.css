@@ -1,5 +1,45 @@
-* {
+/* ── Reset ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* ── Document defaults ───────────────────────────────── */
+body {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  color: var(--text-color-dark);
+  background-color: var(--site-bg-color);
+  line-height: 1.5;
+}
+
+/* ── Typography ────────────────────────────────────────── */
+h1 {
+  font-size: calc(var(--base-font-size) * var(--heading-scale-h1));
+  font-weight: bold;
+  color: var(--text-color-dark);
+  font-family: var(--heading-font);
+}
+
+h2 {
+  font-size: calc(var(--base-font-size) * var(--heading-scale-h2));
+  font-weight: bold;
+  color: var(--text-color-dark);
+  font-family: var(--body-font);
+}
+
+h3 {
+  font-size: calc(var(--base-font-size) * var(--heading-scale-h3));
+  font-weight: bold;
+  color: var(--text-color-dark);
+  font-family: var(--body-font);
+}
+
+p {
+  font-size: var(--base-font-size);
+  color: var(--text-color-dark);
+  font-family: var(--body-font);
 }
