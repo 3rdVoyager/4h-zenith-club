@@ -4,11 +4,19 @@
     --accent-color: #000000;
 
     --button-primary-color: #20603e;
+    --button-primary-hover-color: #184a30;
     --button-secondary-color: #f2efe4;
+    --button-secondary-hover-color: #e8e4d8;
+    --button-border-color: #143401;
+    --button-radius: 0.5rem;
+    --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    --button-letter-spacing: 0.08em;
 
     --border-color: #000000;
 
     --section-bg-color: #f2efe4;
+
+    --logo-color: #1c5135;
 
     /* Spacing scale */
     --space-sm: 1rem;
@@ -16,7 +24,7 @@
     --space-lg: 2rem;
     --space-xl: 3rem;
 
-    /* Layout spacing */
+    /* Page horizontal inset (header, main, footer) */
     --page-padding-x: 5vw;
     --page-padding-y: var(--space-md);
     --section-padding: var(--space-lg);
@@ -28,10 +36,13 @@
 
     --header-bg-color: #f9f7f1;
     --header-text-color: #000000;
+    --header-border-color: rgba(20, 52, 1, 0.15);
+    --nav-link-color: #333333;
+    --nav-link-active-color: var(--button-primary-color);
     --base-font-size: 1.25rem;
     --text-color-dark: #000000;
     --text-color-light: #ffffff;
-    --header-height: 132.67px;
+    --header-height: calc(75px + 2 * var(--space-sm));
     --site-bg-color-primary: #205700;
     --site-bg-color-secondary: #143401;
     --shadow-color: #000000;

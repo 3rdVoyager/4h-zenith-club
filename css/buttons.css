@@ -1,17 +1,36 @@
-button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--button-radius);
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--button-shadow);
   cursor: pointer;
-  font-size: var(--base-font-size);
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
   font-family: var(--body-font);
-  transition: background-color 0.3s ease-in-out;
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 }
 
-button:hover {
-  background-color: color-mix(in srgb, var(--button-primary-color) 80%, transparent);
+.button-small {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+}
+
+.button-large {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
 }
 
 .button-primary {
@@ -19,7 +38,17 @@ button:hover {
   color: var(--text-color-light);
 }
 
-a.button-primary {
-  display: inline-block;
-  text-decoration: none;
+.button-primary:hover {
+  background-color: var(--button-primary-hover-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+}
+
+.button-secondary {
+  background-color: var(--button-secondary-color);
+  color: var(--button-primary-color);
+}
+
+.button-secondary:hover {
+  background-color: var(--button-secondary-hover-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
 }

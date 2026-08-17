@@ -17,11 +17,22 @@ header.innerHTML = `
           <li><a href="/events/">Events</a></li>
           <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="/members/">Members</a></li>
-          <li><a href="/join/" class="button-primary">Join Us</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <a href="/members/" class="button button-secondary">Members <span class="material-symbols-outlined lock-icon" aria-hidden="true">lock</span></a>
+        <a href="/join/" class="button button-primary">Join Zenith</a>
+      </div>
       `;
+
+const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+
+header.querySelectorAll("nav ul a").forEach((link) => {
+  const linkPath = link.getAttribute("href").replace(/\/$/, "") || "/";
+  if (linkPath === currentPath) {
+    link.classList.add("active");
+  }
+});
 
 footer.innerHTML = `
       <p>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
