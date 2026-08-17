@@ -9,7 +9,16 @@ header.innerHTML = `
           <p class="logo-subtitle">Head • Heart • Hands • Health</p>
         </div>
       </div>
-      <nav>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span class="material-symbols-outlined nav-toggle-icon" aria-hidden="true">menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About Us</a></li>
@@ -18,19 +27,63 @@ header.innerHTML = `
           <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
+        <div class="header-actions">
+          <a href="/members/" class="button button-secondary">Members <span class="material-symbols-outlined lock-icon" aria-hidden="true">lock</span></a>
+          <a href="/join/" class="button button-primary">Join Zenith</a>
+        </div>
       </nav>
-      <div class="header-actions">
-        <a href="/members/" class="button button-secondary">Members <span class="material-symbols-outlined lock-icon" aria-hidden="true">lock</span></a>
-        <a href="/join/" class="button button-primary">Join Zenith</a>
-      </div>
       `;
 
 const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
 
-header.querySelectorAll("nav ul a").forEach((link) => {
+header.querySelectorAll(".site-nav ul a").forEach((link) => {
   const linkPath = link.getAttribute("href").replace(/\/$/, "") || "/";
   if (linkPath === currentPath) {
     link.classList.add("active");
+  }
+});
+
+const navToggle = header.querySelector(".nav-toggle");
+const siteNav = header.querySelector("#site-nav");
+const navToggleIcon = navToggle.querySelector(".nav-toggle-icon");
+
+function closeMenu() {
+  header.classList.remove("nav-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open menu");
+  navToggleIcon.textContent = "menu";
+  document.body.classList.remove("nav-menu-open");
+}
+
+function openMenu() {
+  header.classList.add("nav-open");
+  navToggle.setAttribute("aria-expanded", "true");
+  navToggle.setAttribute("aria-label", "Close menu");
+  navToggleIcon.textContent = "close";
+  document.body.classList.add("nav-menu-open");
+}
+
+navToggle.addEventListener("click", () => {
+  if (header.classList.contains("nav-open")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+siteNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1600) {
+    closeMenu();
   }
 });
 

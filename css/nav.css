@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,lock,menu&display=swap");
 
 /* ── Header ────────────────────────────────────────────── */
 header {
@@ -51,11 +51,38 @@ header .logo-subtitle {
   color: var(--logo-color);
 }
 
-header nav ul {
+header .site-nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  min-width: 0;
+}
+
+header .site-nav ul {
   display: flex;
   align-items: center;
   gap: var(--space-md);
   list-style: none;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: var(--space-xs);
+  border: none;
+  background: none;
+  color: var(--logo-color);
+  cursor: pointer;
+}
+
+.nav-toggle-icon {
+  font-family: "Material Symbols Outlined";
+  font-size: 2rem;
+  line-height: 1;
 }
 
 header .header-actions {
@@ -79,7 +106,7 @@ header .header-actions .lock-icon {
   color: var(--button-primary-color);
 }
 
-header nav ul li a {
+header .site-nav ul li a {
   position: relative;
   display: inline-block;
   padding: var(--space-xxs) 0;
@@ -91,12 +118,12 @@ header nav ul li a {
   text-transform: uppercase;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
+header .site-nav ul li a:hover,
+header .site-nav ul li a.active {
   color: var(--nav-link-active-color);
 }
 
-header nav ul li a::after {
+header .site-nav ul li a::after {
   content: "";
   position: absolute;
   bottom: calc(-1 * var(--nav-underline-offset));
@@ -109,9 +136,66 @@ header nav ul li a::after {
   transition: transform var(--transition-fast);
 }
 
-header nav ul li a:hover::after,
-header nav ul li a.active::after {
+header .site-nav ul li a:hover::after,
+header .site-nav ul li a.active::after {
   transform: scaleX(1);
+}
+
+@media (max-width: 1600px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  header .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-md) var(--page-padding-x);
+    background-color: var(--header-bg-color);
+    border-bottom: var(--border-width-thin) solid var(--header-border-color);
+    box-shadow: var(--shadow-md);
+  }
+
+  header.nav-open .site-nav {
+    display: flex;
+  }
+
+  header .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  header .site-nav ul li a {
+    display: block;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--header-border-color);
+  }
+
+  header .site-nav ul li a::after {
+    display: none;
+  }
+
+  header .header-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  header .header-actions .button {
+    width: 100%;
+  }
+}
+
+body.nav-menu-open {
+  overflow: hidden;
 }
 
 /* ── Footer ──────────────────────────────────────────── */
