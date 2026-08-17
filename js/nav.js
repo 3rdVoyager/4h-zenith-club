@@ -23,7 +23,6 @@ header.innerHTML = `
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/programs/">Programs</a></li>
-          <li><a href="/events/">Events</a></li>
           <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
@@ -109,9 +108,7 @@ footer.innerHTML = `
           <h2 class="footer-heading">Explore</h2>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us</a></li>
             <li><a href="/programs/">Programs</a></li>
-            <li><a href="/events/">Events</a></li>
             <li><a href="/resources/">Resources</a></li>
           </ul>
         </nav>
@@ -119,8 +116,8 @@ footer.innerHTML = `
         <nav class="footer-column" aria-label="Get involved">
           <h2 class="footer-heading">Get Involved</h2>
           <ul class="footer-links">
+            <li><a href="/about/">About Us</a></li>
             <li><a href="/join/">Join Zenith</a></li>
-            <li><a href="/members/">Members</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </nav>
@@ -128,8 +125,8 @@ footer.innerHTML = `
         <div class="footer-column">
           <h2 class="footer-heading">Meet With Us</h2>
           <ul class="footer-info">
-            <li>Second Friday of each month</li>
-            <li>3:00&ndash;5:00 PM</li>
+            <li>Meetings are generally held on the third Thursday of the month</li>
+            <li>1:00&ndash;3:00 PM</li>
             <li>Gaithersburg &amp; Derwood, MD</li>
           </ul>
         </div>
