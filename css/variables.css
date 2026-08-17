@@ -4,14 +4,27 @@
     --accent-color: #000000;
 
     --button-primary-color: #20603e;
-    --button-secondary-color: ##f2efe4;
+    --button-secondary-color: #f2efe4;
 
     --border-color: #000000;
 
-    --section-bg-color: #fff9e9;
-    --section-padding: 1rem;
-    --section-margin: 3rem;
-    --section-grid-gap: 1rem;
+    --section-bg-color: #f2efe4;
+
+    /* Spacing scale */
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Layout spacing */
+    --page-padding-x: 5vw;
+    --page-padding-y: var(--space-md);
+    --section-padding: var(--space-lg);
+    --section-gap: var(--space-xl);
+    --section-grid-gap: var(--space-sm);
+    --content-gap: var(--space-sm);
+    --header-padding: var(--space-sm);
+    --footer-padding: var(--space-lg);
 
     --header-bg-color: #f9f7f1;
     --header-text-color: #000000;

@@ -18,3 +18,8 @@ button:hover {
   background-color: var(--button-primary-color);
   color: var(--text-color-light);
 }
+
+a.button-primary {
+  display: inline-block;
+  text-decoration: none;
+}

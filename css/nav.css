@@ -1,7 +1,7 @@
 header {
   background-color: var(--header-bg-color);
   color: var(--text-color-dark);
-  padding: var(--section-padding);
+  padding: var(--header-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +89,7 @@ header nav ul li a:hover:after {
 footer {
   background-color: var(--header-bg-color);
   color: var(--text-color-dark);
-  padding: var(--section-padding);
+  padding: var(--footer-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
