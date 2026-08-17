@@ -81,26 +81,26 @@ document.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 1600) {
+  if (window.innerWidth > 1400) {
     closeMenu();
   }
 });
 
 footer.innerHTML = `
       <div class="footer-main">
-        <div class="footer-column footer-brand">
-          <a href="/" class="footer-logo-link">
-            <img
-              class="footer-logo"
-              src="/assets/images/4h-logo.png"
-              alt="4-H Zenith Club logo"
-            />
-            <span class="footer-logo-text">4-H Zenith Club</span>
-          </a>
-          <p class="footer-tagline">Head &bull; Heart &bull; Hands &bull; Health</p>
+        <div class="footer-brand">
+          <div class="logo-container">
+            <img class="logo" src="/assets/images/4h-logo.png" alt="4-H Zenith Club Logo" />
+            <div class="logo-text-container">
+              <p class="logo-text">4-H Zenith Club</p>
+              <p class="logo-subtitle">Head • Heart • Hands • Health</p>
+            </div>
+          </div>
           <p class="footer-description">
             A community of homeschooling 4-H families growing together through
             hands-on projects, leadership, and service.
+            <br><br>
+            <strong>Email:</strong> zenith.homeschooler.4hclub.md@gmail.com.
           </p>
         </div>
 

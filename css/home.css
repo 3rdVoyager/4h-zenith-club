@@ -1,14 +1,16 @@
-/* ── Hero ──────────────────────────────────────────────── */
+/* ── Hero (full-bleed across all pages) ────────────────── */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--space-md);
-  width: 100%;
-  padding-top: var(--space-xl);
-  padding-inline: var(--section-padding-x);
-  padding-bottom: var(--section-padding-y);
+  width: calc(100% + 2 * var(--page-padding-x));
+  margin-inline: calc(-1 * var(--page-padding-x));
+  margin-top: calc(-1 * var(--page-padding-y));
+  padding-top: var(--space-lg);
+  padding-inline: var(--page-padding-x);
+  padding-bottom: var(--space-xl);
   text-align: center;
   background-color: var(--color-cream-100);
 }
@@ -24,14 +26,10 @@
   color: var(--text-color-muted);
 }
 
-/* ── Home hero (full-bleed + background image) ─────────── */
+/* ── Home hero (taller + background image) ─────────────── */
 .hero--home {
-  width: calc(100% + 2 * var(--page-padding-x));
-  margin-inline: calc(-1 * var(--page-padding-x));
-  margin-top: calc(-1 * var(--page-padding-y));
   min-height: var(--hero-min-height);
   padding-top: var(--space-xl);
-  padding-inline: var(--page-padding-x);
   padding-bottom: var(--section-padding-y);
   background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
     var(--hero-bg-image);
@@ -51,9 +49,13 @@
 }
 
 @media (max-width: 768px) {
-  .hero--home {
+  .hero {
     padding-top: var(--space-lg);
     padding-inline: var(--space-md);
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero--home {
     padding-bottom: var(--section-padding-y);
     min-height: clamp(18rem, 40vh, 28rem);
   }
