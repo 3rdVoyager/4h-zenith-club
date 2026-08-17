@@ -2,7 +2,7 @@
 .page-main {
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap);
+  gap: 0;
   margin-top: var(--header-height);
   padding-inline: var(--page-padding-x);
   padding-block: var(--page-padding-y);
@@ -10,17 +10,36 @@
   color: var(--text-color-dark);
 }
 
+/* ── Section dividers (line centered between sections) ─── */
+.page-main > .hero,
+.page-main > .content-section,
+.page-main > .two-column-layout,
+.page-main > .three-column-layout {
+  border-bottom: var(--border-width-thick) solid var(--border-color);
+}
+
+.page-main > .content-section,
+.page-main > .two-column-layout,
+.page-main > .three-column-layout {
+  padding-inline: var(--section-padding-x);
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.page-main > :last-child {
+  border-bottom: none;
+}
+
 /* ── Content sections ──────────────────────────────────── */
 .content-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--content-gap);
+  gap: var(--section-content-padding);
   width: 100%;
-  padding: var(--section-padding);
+  text-align: center;
   background-color: var(--section-bg-color);
-  border-bottom: var(--border-width-thick) solid var(--border-color);
-  font-size: var(--base-font-size);
+  font-size: var(--text-normal);
   color: var(--text-color-dark);
   font-family: var(--body-font);
 }
@@ -30,13 +49,12 @@
 .three-column-layout {
   display: grid;
   gap: var(--section-grid-gap);
-  padding: var(--section-padding);
   background-color: var(--section-bg-color);
-  border-bottom: var(--border-width-thick) solid var(--border-color);
 }
 
 .two-column-layout {
   grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
 .three-column-layout {
@@ -51,23 +69,8 @@
   background-color: transparent;
 }
 
-/* ── Stacked lists ─────────────────────────────────────── */
-.content-list,
-.zenith-focus-list,
-.program-plan-list,
-.officer-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--content-gap);
-  list-style: none;
-}
-
-.content-list > li,
-.zenith-focus-item,
-.program-plan-item,
-.officer-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--content-gap);
-  list-style: none;
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
 }

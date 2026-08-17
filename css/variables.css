@@ -45,33 +45,43 @@
   --body-font: "Lato", sans-serif;
   --logo-font: "Montserrat", sans-serif;
 
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.25rem;
-  --font-size-lg: 2rem;
+  /* Paragraph text (only two sizes) */
+  --text-normal: 1.25rem;
+  --text-small: 1rem;
 
-  --base-font-size: var(--font-size-md);
-  --heading-scale-h1: 2;
-  --heading-scale-h2: 1.5;
-  --heading-scale-h3: 1.25;
+  /* Headings */
+  --heading-size-h1: calc(var(--text-normal) * 2);
+  --heading-size-h2: calc(var(--text-normal) * 1.5);
+  --heading-size-h3: calc(var(--text-normal) * 1.25);
+
+  /* Branding (not paragraph text) */
+  --logo-text-size: 2rem;
 
   --letter-spacing-tight: 0.02em;
   --letter-spacing-wide: 0.08em;
 
+  --line-height-body: 1.7;
+  --line-height-tight: 1.25;
+
+  --content-max-width: 42rem;
+  --content-max-width-wide: 56rem;
+  --content-media-max-width: 12rem;
+
   /* ── Spacing scale ───────────────────────────────────── */
-  --space-2xs: 0.25rem;
+  --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
+  --space-xxl: 4.5rem;
 
   /* ── Layout ──────────────────────────────────────────── */
   --page-padding-x: 5vw;
   --page-padding-y: var(--space-md);
-  --section-padding: var(--space-lg);
-  --section-gap: var(--space-xl);
+  --section-padding-y: calc(var(--space-xxl) * 2);
+  --section-padding-x: var(--space-lg);
+  --section-content-padding: var(--space-md);
   --section-grid-gap: var(--space-sm);
   --content-gap: var(--space-sm);
   --header-padding: var(--space-sm);
@@ -97,4 +107,15 @@
 
   /* ── Effects ─────────────────────────────────────────── */
   --transition-fast: 0.2s ease-in-out;
+  --shadow-sm: 0 1px 3px rgba(20, 52, 1, 0.08);
+  --shadow-md: 0 4px 12px rgba(20, 52, 1, 0.1);
+
+  /* ── Home page ───────────────────────────────────────── */
+  --hero-bg-image: url("/assets/images/hero-placeholder.svg");
+  --hero-overlay: rgba(20, 52, 1, 0.6);
+  --hero-min-height: clamp(22rem, 50vh, 40rem);
+  --hero-content-max-width: 52rem;
+  --section-accent: var(--color-green-700);
+  --card-bg: var(--color-cream-100);
+  --card-border: rgba(20, 52, 1, 0.12);
 }
