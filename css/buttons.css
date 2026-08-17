@@ -1,0 +1,20 @@
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: var(--base-font-size);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-family: var(--body-font);
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: color-mix(in srgb, var(--button-primary-color) 80%, transparent);
+}
+
+.button-primary {
+  background-color: var(--button-primary-color);
+  color: var(--text-color-light);
+}

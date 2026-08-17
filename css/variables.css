@@ -1,27 +1,30 @@
 :root {
     --primary-color: #000000;
     --secondary-color: #ffffff;
-    --tertiary-color: #000000;
     --accent-color: #000000;
 
-    --button-primary-color: #000000;
-    --button-secondary-color: #ffffff;
-    --button-tertiary-color: #000000;
+    --button-primary-color: #20603e;
+    --button-secondary-color: ##f2efe4;
 
     --border-color: #000000;
-    --section-bg-color: #8becbb;
+
+    --section-bg-color: #fff9e9;
     --section-padding: 1rem;
-    --section-margin: 1rem;
-    --header-bg-color: #ffffff;
+    --section-margin: 3rem;
+    --section-grid-gap: 1rem;
+
+    --header-bg-color: #f9f7f1;
     --header-text-color: #000000;
     --base-font-size: 1.25rem;
-    --text-color: #000000;
-    --header-height: 69.33px;
+    --text-color-dark: #000000;
+    --text-color-light: #ffffff;
+    --header-height: 132.67px;
     --site-bg-color-primary: #205700;
     --site-bg-color-secondary: #143401;
     --shadow-color: #000000;
+    --site-bg-color: #f2efe4;
 
-    --heading-font: "Playfair Display", serif;
+    --heading-font: "Libre Baskerville", serif;
     --body-font: "Lato", sans-serif;
     --logo-font: "Montserrat", sans-serif;
 }

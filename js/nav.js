@@ -2,7 +2,13 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 
 header.innerHTML = `
-      <h1>4-H Zenith Club</h1>
+      <div class="logo-container">
+        <img class="logo" src="/assets/images/4-h-logo.png" alt="4-H Zenith Club Logo" />
+        <div class="logo-text-container">
+          <h1 class="logo-text">4-H Zenith Club</h1>
+          <p class="logo-subtitle">Head • Heart • Hands • Health</p>
+        </div>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -12,6 +18,7 @@ header.innerHTML = `
           <li><a href="#">Members</a></li>
           <li><a href="#">Resources</a></li>
           <li><a href="#">Contact</a></li>
+          <li><button class="button-primary">Join Us</button></li>
         </ul>
       </nav>
       `;
