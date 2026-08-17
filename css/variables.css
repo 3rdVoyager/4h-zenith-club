@@ -20,4 +20,8 @@
     --site-bg-color-primary: #205700;
     --site-bg-color-secondary: #143401;
     --shadow-color: #000000;
+
+    --heading-font: "Playfair Display", serif;
+    --body-font: "Lato", sans-serif;
+    --logo-font: "Montserrat", sans-serif;
 }
