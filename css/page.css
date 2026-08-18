@@ -37,6 +37,7 @@
   align-items: center;
   gap: var(--section-content-padding);
   width: 100%;
+  height: 100%;
   text-align: center;
   background-color: var(--section-bg-color);
   font-size: var(--text-normal);
