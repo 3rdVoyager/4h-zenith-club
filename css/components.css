@@ -57,6 +57,7 @@
 
 .content-section > .prose,
 .content-section > .content-media,
+.content-section > .gallery,
 .content-section > .card-grid,
 .content-section > .table-scroll {
   width: 100%;
@@ -81,6 +82,129 @@
   margin-top: var(--space-xs);
   font-size: var(--text-small);
   color: var(--text-color-muted);
+}
+
+/* ── Gallery (scrolling image carousel) ─────────────────── */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.gallery__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery__track {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery__slide {
+  grid-area: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition-fast),
+    visibility var(--transition-fast);
+  pointer-events: none;
+}
+
+.gallery__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery__slide img {
+  width: 75%;
+  height: auto;
+}
+
+.gallery figcaption {
+  margin-top: var(--space-xs);
+  font-size: var(--text-small);
+  color: var(--text-color-muted);
+  text-align: center;
+}
+
+.gallery-thumbnails,
+.gallery-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-thumbnails button,
+.gallery-dots button {
+  padding: 0;
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.gallery-thumbnails button {
+  border-radius: var(--button-radius);
+}
+
+.gallery-thumbnails button[aria-selected="true"] {
+  border-color: var(--section-accent);
+}
+
+.gallery-thumbnails button:focus-visible,
+.gallery-dots button:focus-visible {
+  outline: 2px solid var(--section-accent);
+  outline-offset: 2px;
+}
+
+.gallery-thumbnails img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: calc(var(--button-radius) - 2px);
+  object-fit: cover;
+}
+
+.gallery-dots {
+  flex-wrap: nowrap;
+}
+
+.gallery-dots button {
+  width: 0.625rem;
+  height: 0.625rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--card-border);
+}
+
+.gallery-dots button[aria-selected="true"] {
+  background-color: var(--section-accent);
+  transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery__slide {
+    transition: none;
+  }
 }
 
 /* ── Card ──────────────────────────────────────────────── */

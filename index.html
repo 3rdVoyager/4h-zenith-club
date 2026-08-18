@@ -6,6 +6,7 @@
     <title>4-H Zenith Club | Home</title>
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/nav.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +26,9 @@
         </p>
       </section>
 
-      <section class="two-column-layout">
-        <section class="content-section" id="about-4-H">
-          <h2>About 4-H</h2>
+      <section class="content-section" id="about-4-H">
+        <h2>About 4-H</h2>
+        <div class="three-column-layout">
           <div class="prose">
             <p>
               4-H is the largest youth development organization in the United
@@ -45,6 +46,11 @@
               inclusiveness of all children regardless of background or
               identity.
             </p>
+          </div>
+          <figure class="content-media">
+            <img src="/assets/images/4h-logo.png" alt="4-H clover logo" />
+          </figure>
+          <div class="prose">
             <p>
               4-H has an over 100-year tradition of voluntary action through
               strong public and private partnerships at federal, state, and
@@ -61,12 +67,7 @@
               working and learning together.
             </p>
           </div>
-        </section>
-        <section class="content-section">
-          <figure class="content-media">
-            <img src="/assets/images/4h-logo.png" alt="4-H clover logo" />
-          </figure>
-        </section>
+        </div>
       </section>
 
       <section class="content-section" id="about-zenith">
@@ -270,14 +271,58 @@
       <section class="two-column-layout">
         <section class="content-section" id="club-booth">
           <h2>Club Booth</h2>
-          <figure class="content-media">
-            <img src="/assets/images/homepage/club-booth.jpg" alt="Club booth" />
+          <figure class="gallery" data-autoplay="5000">
+            <div class="gallery__viewport">
+              <ul class="gallery__track">
+                <li class="gallery__slide is-active">
+                  <img
+                    src="/assets/images/awards/2026 Booth.jpg"
+                    alt="2026 club booth at the Montgomery County Fair"
+                  />
+                </li>
+                <li class="gallery__slide">
+                  <img
+                    src="/assets/images/awards/2025 Booth.jpg"
+                    alt="2025 club booth at the Montgomery County Fair"
+                  />
+                </li>
+                <li class="gallery__slide">
+                  <img
+                    src="/assets/images/awards/2024 Booth.JPG"
+                    alt="2024 club booth at the Montgomery County Fair"
+                  />
+                </li>
+                <li class="gallery__slide">
+                  <img
+                    src="/assets/images/awards/2023 Booth.JPG"
+                    alt="2023 club booth at the Montgomery County Fair"
+                  />
+                </li>
+              </ul>
+            </div>
+            <ul class="gallery-thumbnails" aria-label="Booth photos"></ul>
           </figure>
         </section>
         <section class="content-section" id="club-banner">
           <h2>Club Banner</h2>
-          <figure class="content-media">
-            <img src="/assets/images/homepage/club-banner.jpg" alt="Club banner" />
+          <figure class="gallery" data-autoplay="5000">
+            <div class="gallery__viewport">
+              <ul class="gallery__track">
+                <li class="gallery__slide is-active">
+                  <img
+                    src="/assets/images/awards/2026 Banner.jpg"
+                    alt="2026 club banner at the Montgomery County Fair"
+                  />
+                </li>
+                <li class="gallery__slide">
+                  <img
+                    src="/assets/images/awards/2025 Banner.jpg"
+                    alt="2025 club banner at the Montgomery County Fair"
+                  />
+                </li>
+              </ul>
+            </div>
+            <ul class="gallery-thumbnails" aria-label="Banner photos"></ul>
           </figure>
         </section>
       </section>

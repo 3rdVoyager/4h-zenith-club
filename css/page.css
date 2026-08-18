@@ -70,8 +70,17 @@
   background-color: transparent;
 }
 
+.content-section > .two-column-layout,
+.content-section > .three-column-layout {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
-  .two-column-layout {
+  .two-column-layout,
+  .three-column-layout {
     grid-template-columns: 1fr;
   }
 }

@@ -78,7 +78,7 @@
   /* ── Layout ──────────────────────────────────────────── */
   --page-padding-x: 5vw;
   --page-padding-y: var(--space-md);
-  --section-padding-y: calc(var(--space-xxl) * 1.5);
+  --section-padding-y: var(--space-xxl);
   --section-padding-x: var(--space-lg);
   --section-content-padding: var(--space-md);
   --section-grid-gap: var(--space-sm);
