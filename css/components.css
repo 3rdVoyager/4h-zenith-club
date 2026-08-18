@@ -198,15 +198,13 @@ th.card-value {
   font-weight: 700;
   letter-spacing: var(--letter-spacing-wide);
   color: var(--section-accent);
-  vertical-align: bottom;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .card-table th[scope="row"] {
-  font-size: var(--text-small);
-  text-transform: uppercase;
-  text-align: right;
-  vertical-align: top;
   white-space: nowrap;
+  padding-inline-end: var(--space-md);
 }
 
 .card-table__corner {
@@ -221,7 +219,7 @@ th.card-value {
   border: 1px solid var(--card-border);
   border-radius: var(--button-radius);
   box-shadow: var(--shadow-sm);
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .card-table td.card-value {
@@ -234,7 +232,7 @@ th.card-value {
 
 .card-table--months {
   --card-table-month-cols: 6;
-  --card-table-row-header-width: 5.5rem;
+  --card-table-row-header-width: 7.5rem;
   min-width: 42rem;
 }
 
