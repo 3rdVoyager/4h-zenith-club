@@ -124,4 +124,5 @@
   --card-grid-min-small: 14rem;
   --card-grid-min-normal: 20rem;
   --card-grid-min-large: 42rem;
+  --gallery-paired-height: clamp(16rem, 28vw, 25rem);
 }

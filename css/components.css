@@ -132,6 +132,14 @@
   height: auto;
 }
 
+/* Side-by-side galleries: match image height across columns (e.g. booth + banner) */
+.two-column-layout .gallery__slide img {
+  width: auto;
+  height: var(--gallery-paired-height);
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .gallery figcaption {
   margin-top: var(--space-xs);
   font-size: var(--text-small);
