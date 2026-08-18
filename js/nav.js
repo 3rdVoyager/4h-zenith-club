@@ -125,9 +125,9 @@ footer.innerHTML = `
         <div class="footer-column">
           <h2 class="footer-heading">Meet With Us</h2>
           <ul class="footer-info">
-            <li>Meetings are generally held on the third Thursday of the month</li>
+            <li>Meetings are generally held on the third Thursday of the month from:</li>
             <li>1:00&ndash;3:00 PM</li>
-            <li>Gaithersburg &amp; Derwood, MD</li>
+            <li>In Gaithersburg or Derwood, MD</li>
           </ul>
         </div>
       </div>

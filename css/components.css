@@ -9,34 +9,29 @@
   font-size: var(--text-normal);
 }
 
+.prose > * + * {
+  margin-top: var(--space-md);
+}
+
 .prose ul,
 .prose li {
   font-size: var(--text-normal);
 }
 
-.prose p + p {
-  margin-top: var(--space-sm);
-}
-
 .prose ul {
   display: inline-block;
-  margin-top: var(--space-sm);
   padding-left: var(--space-lg);
   text-align: left;
   line-height: var(--line-height-body);
 }
 
-.prose li + li {
+.prose ul > li + li {
   margin-top: var(--space-xs);
 }
 
 .prose strong {
   color: var(--section-accent);
   font-weight: 700;
-}
-
-.prose .callout {
-  text-align: left;
 }
 
 /* ── Section content layout ──────────────────────────────── */
@@ -77,81 +72,29 @@
   color: var(--text-color-muted);
 }
 
-/* ── Callout ─────────────────────────────────────────────── */
-.callout {
-  margin-top: var(--section-content-padding);
-  padding: var(--section-content-padding);
-  background-color: var(--card-bg);
-  border-left: 4px solid var(--button-primary-color);
-  border-radius: 0 var(--button-radius) var(--button-radius) 0;
-  box-shadow: var(--shadow-sm);
-}
-
-.callout p {
-  margin: 0;
-  line-height: var(--line-height-body);
-}
-
-/* ── Card list (stacked cards) ─────────────────────────── */
-.card-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--content-gap);
-  width: 100%;
-  margin-inline: auto;
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
-
-.card-list > li {
-  display: flex;
-  flex-direction: column;
-  gap: var(--content-gap);
-  list-style: none;
-}
-
-.card-list--compact {
-  gap: var(--space-xs);
-}
-
-.card-list--compact > li {
-  padding: var(--space-sm) var(--space-md);
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--button-radius);
-}
-
-.card-list--compact h3 {
-  color: var(--section-accent);
-  line-height: var(--line-height-tight);
-}
-
-.card-list--compact p {
-  margin-top: var(--space-xxs);
-  font-size: var(--text-normal);
-  color: var(--text-color-muted);
-}
-
-/* ── Card grid (label / value tiles) ───────────────────── */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: var(--space-sm);
-  width: 100%;
-  margin-inline: auto;
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
-
+/* ── Card ──────────────────────────────────────────────── */
+.card,
+.card-list > li,
 .card-grid > li {
   padding: var(--space-sm) var(--space-md);
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--button-radius);
   box-shadow: var(--shadow-sm);
-  list-style: none;
+  transition:
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .card:hover,
+  .card-list > li:hover,
+  .card-grid > li:hover {
+    border-color: rgba(20, 52, 1, 0.22);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
 }
 
 .card-label {
@@ -169,6 +112,63 @@
   font-size: var(--text-normal);
   font-weight: 600;
   line-height: var(--line-height-tight);
+}
+
+/* ── Card list (stacked cards) ─────────────────────────── */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.card-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
+  list-style: none;
+}
+
+.card-list h3 {
+  color: var(--section-accent);
+  line-height: var(--line-height-tight);
+}
+
+.card-list p {
+  margin-top: var(--space-xxs);
+  font-size: var(--text-normal);
+  color: var(--text-color-muted);
+}
+
+/* ── Card grid (label / value tiles) ───────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--card-grid-min)), 1fr)
+  );
+  gap: var(--space-sm);
+  width: 100%;
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.card-grid--sm {
+  --card-grid-min: var(--card-grid-min-sm);
+}
+
+.card-grid--lg {
+  --card-grid-min: var(--card-grid-min-lg);
+}
+
+.card-grid > li {
+  list-style: none;
 }
 
 @media (max-width: 768px) {

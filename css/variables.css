@@ -121,4 +121,7 @@
   --section-accent: var(--color-green-700);
   --card-bg: var(--color-cream-100);
   --card-border: rgba(20, 52, 1, 0.12);
+  --card-grid-min: 20rem;
+  --card-grid-min-sm: 14rem;
+  --card-grid-min-lg: 26rem;
 }
