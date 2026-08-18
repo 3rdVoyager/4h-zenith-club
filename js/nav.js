@@ -22,7 +22,7 @@ header.innerHTML = `
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About Us</a></li>
-          <li><a href="/programs/">Programs</a></li>
+          <li><a href="/meetings/">Meetings</a></li>
           <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
@@ -108,7 +108,7 @@ footer.innerHTML = `
           <h2 class="footer-heading">Explore</h2>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/programs/">Programs</a></li>
+            <li><a href="/meetings/">Meetings</a></li>
             <li><a href="/resources/">Resources</a></li>
           </ul>
         </nav>
