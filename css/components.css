@@ -61,7 +61,10 @@
 .content-section > .card-grid,
 .content-section > .table-scroll {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin-inline: auto;
+  align-self: stretch;
 }
 
 /* ── Content media (images, figures) ─────────────────────── */
@@ -314,6 +317,7 @@ th.card-value {
 .table-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
 }
 
 .card-table {
@@ -360,17 +364,25 @@ th.card-value {
   font-weight: 400;
   line-height: var(--line-height-body);
   color: var(--text-color-muted);
+  overflow-wrap: anywhere;
 }
 
 .card-table--months {
   --card-table-month-cols: 6;
   --card-table-row-header-width: 7.5rem;
-  min-width: 42rem;
+  --card-table-month-col-min: 10rem;
+  width: 100%;
+  min-width: calc(
+    var(--card-table-row-header-width) +
+      var(--card-table-month-cols) * var(--card-table-month-col-min) +
+      var(--card-table-month-cols) * var(--space-sm)
+  );
 }
 
 .card-table--months th[scope="row"],
 .card-table--months .card-table__corner {
   width: var(--card-table-row-header-width);
+  min-width: var(--card-table-row-header-width);
 }
 
 .card-table--months th[scope="col"]:not(.card-table__corner),
@@ -378,4 +390,5 @@ th.card-value {
   width: calc(
     (100% - var(--card-table-row-header-width)) / var(--card-table-month-cols)
   );
+  min-width: var(--card-table-month-col-min);
 }
