@@ -22,9 +22,8 @@
   --site-bg-color: var(--color-cream-200);
   --section-bg-color: var(--color-cream-200);
   --header-bg-color: var(--color-cream-100);
-  --header-border-color: rgba(20, 52, 1, 0.15);
-
-  --border-color: var(--color-black);
+  --light-border-color: rgba(20, 52, 1, 0.15);
+  --dark-border-color: var(--color-green-700);
   --logo-color: var(--color-green-700);
 
   --nav-link-color: var(--text-color-muted);
@@ -92,6 +91,7 @@
 
   --logo-size: 75px;
   --header-height: calc(var(--logo-size) + 2 * var(--header-padding));
+  --header-offset: calc(var(--header-height) + var(--border-width-thin));
   --z-header: 1000;
 
   /* ── Borders ─────────────────────────────────────────── */

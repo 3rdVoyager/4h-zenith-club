@@ -15,7 +15,7 @@
 .page-main > .content-section,
 .page-main > .two-column-layout,
 .page-main > .three-column-layout {
-  border-bottom: var(--border-width-thick) solid var(--border-color);
+  border-bottom: var(--border-width-thick) solid var(--dark-border-color);
 }
 
 .page-main > .content-section,

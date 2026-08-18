@@ -6,6 +6,7 @@
     <title>4-H Zenith Club | Members</title>
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/nav.js" defer></script>
+    <script src="/js/members-nav.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,14 +16,23 @@
   </head>
   <body>
     <header></header>
-    <main class="page-main">
-      <section class="hero" id="hero">
-        <h1>Members</h1>
-        <p>Private information for club members only.</p>
-      </section>
+    <main class="page-main" data-page-title="Members">
       <section class="content-section">
-        <h2>Coming Soon</h2>
-        <p>This page is a placeholder. Content will be added here soon.</p>
+        <h2>Member Resources</h2>
+        <ul class="card-grid card-grid--sm">
+          <li>
+            <a href="/members/roster/">
+              <h3 class="card-label">Roster</h3>
+              <p class="card-value">Club member directory</p>
+            </a>
+          </li>
+          <li>
+            <span class="card-grid-item card-grid-item--soon">
+              <h3 class="card-label">Documents</h3>
+              <p class="card-value">Forms and club files — coming soon</p>
+            </span>
+          </li>
+        </ul>
       </section>
     </main>
     <footer></footer>

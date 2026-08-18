@@ -13,7 +13,7 @@ header {
   padding: var(--header-padding) var(--page-padding-x);
   background-color: var(--header-bg-color);
   color: var(--text-color-dark);
-  border-bottom: var(--border-width-thin) solid var(--header-border-color);
+  border-bottom: var(--border-width-thin) solid var(--light-border-color);
   font-family: var(--logo-font);
 }
 
@@ -180,7 +180,7 @@ header .site-nav ul li a.active::after {
     gap: 0;
     padding: var(--space-md) var(--page-padding-x);
     background-color: var(--header-bg-color);
-    border-bottom: var(--border-width-thin) solid var(--header-border-color);
+    border-bottom: var(--border-width-thin) solid var(--light-border-color);
     box-shadow: var(--shadow-md);
   }
 
@@ -197,7 +197,7 @@ header .site-nav ul li a.active::after {
   header .site-nav ul li a {
     display: block;
     padding: var(--space-sm) 0;
-    border-bottom: 1px solid var(--header-border-color);
+    border-bottom: 1px solid var(--light-border-color);
   }
 
   header .site-nav ul li a::after {
@@ -228,7 +228,7 @@ footer {
   padding: var(--footer-padding-y) var(--page-padding-x);
   background-color: var(--footer-bg-color);
   color: var(--text-color-dark);
-  border-top: var(--border-width-thin) solid var(--header-border-color);
+  border-top: var(--border-width-thin) solid var(--light-border-color);
   font-family: var(--body-font);
 }
 
@@ -333,7 +333,7 @@ footer .footer-bottom {
   align-items: center;
   width: 100%;
   padding-top: var(--space-md);
-  border-top: var(--border-width-thin) solid var(--header-border-color);
+  border-top: var(--border-width-thin) solid var(--light-border-color);
 }
 
 footer .footer-bottom p {

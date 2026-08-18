@@ -29,6 +29,18 @@
   margin-top: var(--space-xs);
 }
 
+.prose .card-grid {
+  display: inline-grid;
+  width: auto;
+  max-width: 100%;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--card-grid-min)), max-content)
+  );
+  text-align: left;
+  vertical-align: top;
+}
+
 .prose strong {
   color: var(--section-accent);
   font-weight: 700;
@@ -174,5 +186,9 @@
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .prose .card-grid {
+    grid-template-columns: minmax(min(100%, var(--card-grid-min)), max-content);
   }
 }
