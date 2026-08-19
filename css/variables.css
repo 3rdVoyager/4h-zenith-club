@@ -78,7 +78,7 @@
   /* ── Layout ──────────────────────────────────────────── */
   --page-padding-x: 5vw;
   --page-padding-y: var(--space-md);
-  --section-padding-y: var(--space-xxl);
+  --section-padding-y: var(--space-xl);
   --section-padding-x: var(--space-lg);
   --section-content-padding: var(--space-md);
   --section-grid-gap: var(--space-sm);
@@ -116,7 +116,7 @@
   /* ── Home page ───────────────────────────────────────── */
   --hero-bg-image: url("/assets/images/hero-placeholder.svg");
   --hero-overlay: rgba(20, 52, 1, 0.6);
-  --hero-min-height: clamp(22rem, 50vh, 40rem);
+  --hero-min-height: clamp(10rem, 20vh, 14rem);
   --hero-content-max-width: 52rem;
   --section-accent: var(--color-green-700);
   --card-bg: var(--color-cream-100);
