@@ -12,7 +12,7 @@
   padding-inline: var(--page-padding-x);
   padding-bottom: var(--space-xl);
   text-align: center;
-  background-color: var(--color-cream-100);
+  background-color: var(--site-bg-color);
 }
 
 .hero h1 {
