@@ -1,86 +1,64 @@
-/* ── Page shell ────────────────────────────────────────── */
-.page-main {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-top: var(--header-height);
-  padding-inline: var(--page-padding-x);
-  padding-block: var(--page-padding-y);
-  background: var(--site-bg-color);
-  color: var(--text-color-dark);
-}
-
-/* ── Section dividers (line centered between sections) ─── */
-.page-main > .hero,
-.page-main > .content-section,
-.page-main > .two-column-layout,
-.page-main > .three-column-layout {
-  border-bottom: var(--border-width-thick) solid var(--dark-border-color);
-}
-
-.page-main > .content-section,
-.page-main > .two-column-layout,
-.page-main > .three-column-layout {
-  padding-inline: var(--section-padding-x);
-  padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
-}
-
-.page-main > :last-child {
-  border-bottom: none;
-}
-
-/* ── Content sections ──────────────────────────────────── */
-.content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--section-content-padding);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: var(--section-bg-color);
-  font-size: var(--text-normal);
-  color: var(--text-color-dark);
-  font-family: var(--body-font);
-}
-
-/* ── Multi-column layouts ──────────────────────────────── */
-.two-column-layout,
-.three-column-layout {
-  display: grid;
-  gap: var(--section-grid-gap);
-  background-color: var(--section-bg-color);
-}
-
-.two-column-layout {
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-
-.three-column-layout {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.two-column-layout .content-section,
-.three-column-layout .content-section {
-  padding: 0;
-  margin: 0;
-  border-bottom: none;
-  background-color: transparent;
-}
-
-.content-section > .two-column-layout,
-.content-section > .three-column-layout {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-@media (max-width: 768px) {
-  .two-column-layout,
-  .three-column-layout {
-    grid-template-columns: 1fr;
-  }
-}
+/* ── Page shell ────────────────────────────────────────── */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--header-height);
+  padding-inline: var(--page-padding-x);
+  padding-block: var(--page-padding-y);
+  background: var(--site-bg-color);
+  color: var(--text-color-dark);
+}
+
+/* ── Section dividers (line centered between sections) ─── */
+.page-main > .hero,
+.page-main > .content-section,
+.page-main > .layout-grid.snap {
+  border-bottom: var(--border-width-thick) solid var(--dark-border-color);
+}
+
+.page-main > .content-section,
+.page-main > .layout-grid.snap {
+  padding-inline: var(--section-padding-x);
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.page-main > :last-child {
+  border-bottom: none;
+}
+
+/* ── Content sections ──────────────────────────────────── */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--section-content-padding);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  font-size: var(--text-normal);
+  color: var(--text-color-dark);
+  font-family: var(--body-font);
+}
+
+/* ── Snap layout grid (section regions) ────────────────── */
+.layout-grid.snap {
+  background-color: var(--section-bg-color);
+}
+
+.layout-grid.snap .content-section {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.content-section > .layout-grid.snap {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+

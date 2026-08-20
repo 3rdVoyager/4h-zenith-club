@@ -29,16 +29,16 @@
   margin-top: var(--space-xs);
 }
 
-.prose .card-grid {
-  display: inline-grid;
-  width: auto;
-  max-width: 100%;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, var(--card-grid-min)), max-content)
-  );
+.prose ul.layout-grid,
+.prose ol.layout-grid {
+  display: grid;
+  padding-left: 0;
   text-align: left;
-  vertical-align: top;
+  line-height: inherit;
+}
+
+.prose .layout-grid > li + li {
+  margin-top: 0;
 }
 
 .prose strong {
@@ -66,7 +66,7 @@
 .content-section > .prose,
 .content-section > .content-media,
 .content-section > .gallery,
-.content-section > .card-grid,
+.content-section > .layout-grid,
 .content-section > .table-scroll {
   width: 100%;
   max-width: 100%;
@@ -144,7 +144,7 @@
 }
 
 /* Side-by-side galleries: match image height across columns (e.g. booth + banner) */
-.two-column-layout .gallery__slide img {
+.layout-grid .gallery__slide img {
   width: auto;
   height: var(--gallery-paired-height);
   max-width: 100%;
@@ -226,20 +226,7 @@
   }
 }
 
-/* ── Card ──────────────────────────────────────────────── */
-.card,
-.card-grid > li {
-  padding: var(--space-sm) var(--space-md);
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--button-radius);
-  box-shadow: var(--shadow-sm);
-  transition:
-    box-shadow var(--transition-fast),
-    border-color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
+/* ── Card typography (used inside type-card cells) ─────── */
 .card-label {
   display: block;
   font-size: var(--text-small);
@@ -257,11 +244,6 @@
   line-height: var(--line-height-tight);
 }
 
-.card-grid > li:has(a):hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
 /* Keep table cells in normal table layout when reusing card classes */
 td.card-label,
 td.card-value,
@@ -270,14 +252,20 @@ th.card-value {
   display: table-cell;
 }
 
-/* ── Card grid (responsive, auto-wrapping columns) ─────── */
-.card-grid {
-  --card-grid-min: var(--card-grid-min-normal);
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(min(100%, var(--card-grid-min)), 1fr)
+/* ── Layout grid ───────────────────────────────────────── */
+.layout-grid {
+  --card-min: var(--card-min-md);
+  --card-max: var(--card-max-md);
+  --cols-max: 999;
+  --track-min: min(
+    100%,
+    max(
+      var(--card-min),
+      calc((100% - (var(--cols-max) - 1) * var(--space-sm)) / var(--cols-max))
+    )
   );
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--track-min), 1fr));
   gap: var(--space-sm);
   width: 100%;
   margin-inline: auto;
@@ -286,52 +274,85 @@ th.card-value {
   text-align: left;
 }
 
-.card-grid.grid-xsmall {
-  --card-grid-min: var(--card-grid-min-xsmall);
+.layout-grid.snap {
+  gap: var(--section-grid-gap);
+  align-items: start;
+  grid-template-columns: repeat(var(--cols-max), 1fr);
 }
 
-.card-grid.grid-small {
-  --card-grid-min: var(--card-grid-min-small);
+@media (max-width: 768px) {
+  .layout-grid.snap {
+    grid-template-columns: 1fr;
+  }
 }
 
-.card-grid.grid-normal {
-  --card-grid-min: var(--card-grid-min-normal);
+/* Track density utilities */
+.cards-sm {
+  --card-min: var(--card-min-sm);
+  --card-max: var(--card-max-sm);
 }
 
-.card-grid.grid-large {
-  --card-grid-min: var(--card-grid-min-large);
+.cards-md {
+  --card-min: var(--card-min-md);
+  --card-max: var(--card-max-md);
 }
 
-.card-grid.grid-xlarge {
-  --card-grid-min: var(--card-grid-min-xlarge);
+.cards-lg {
+  --card-min: var(--card-min-lg);
+  --card-max: var(--card-max-lg);
 }
 
-.card-grid > li {
+/* Column cap utilities */
+.cols-2 {
+  --cols-max: 2;
+}
+
+.cols-3 {
+  --cols-max: 3;
+}
+
+.cols-4 {
+  --cols-max: 4;
+}
+
+/* Surface types */
+.layout-grid.type-card > :where(*) {
   display: flex;
   flex-direction: column;
   gap: var(--content-gap);
-  list-style: none;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--button-radius);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
-.card-grid > li > h3:not(.card-label) {
+.layout-grid.type-card > :where(*):has(a):hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.layout-grid.type-card > :where(*) > h3:not(.card-label) {
   color: var(--section-accent);
   line-height: var(--line-height-tight);
 }
 
-.card-grid > li > p:not(.card-value) {
+.layout-grid.type-card > :where(*) > p:not(.card-value) {
   margin-top: var(--space-xxs);
   font-size: var(--text-normal);
   color: var(--text-color-muted);
 }
 
-@media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .prose .card-grid {
-    grid-template-columns: minmax(min(100%, var(--card-grid-min)), max-content);
-  }
+.type-plain {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* ── Card table ────────────────────────────────────────── */

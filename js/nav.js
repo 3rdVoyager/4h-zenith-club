@@ -21,7 +21,7 @@ header.innerHTML = `
       <nav id="site-nav" class="site-nav">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/meetings/">Meetings</a></li>
           <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact/">Contact</a></li>
