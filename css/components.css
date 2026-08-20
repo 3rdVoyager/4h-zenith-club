@@ -55,6 +55,14 @@
   color: var(--section-accent);
 }
 
+.content-section > h3 {
+  width: 100%;
+  margin-inline: auto;
+  padding-bottom: var(--space-xs);
+  text-align: center;
+  color: var(--section-accent);
+}
+
 .content-section > .prose,
 .content-section > .content-media,
 .content-section > .gallery,
@@ -247,6 +255,11 @@
   font-size: var(--text-normal);
   font-weight: 600;
   line-height: var(--line-height-tight);
+}
+
+.card-grid > li:has(a):hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 /* Keep table cells in normal table layout when reusing card classes */

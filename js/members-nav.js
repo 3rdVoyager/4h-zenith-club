@@ -7,6 +7,8 @@ if (main && window.location.pathname.startsWith("/members")) {
   const membersLinks = [
     { href: "/members/", label: "Dashboard" },
     { href: "/members/roster/", label: "Roster" },
+    { href: "/members/officers/", label: "Club Officers" },
+    { href: "/members/public-speaking/", label: "Public Speaking" },
   ];
 
   const hero = main.querySelector(".hero");
