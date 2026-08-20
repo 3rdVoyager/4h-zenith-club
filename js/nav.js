@@ -2,13 +2,13 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 
 header.innerHTML = `
-      <div class="logo-container">
+      <a class="logo-container" href="/">
         <img class="logo" src="/assets/images/4h-logo.png" alt="4-H Zenith Club Logo" />
         <div class="logo-text-container">
           <h1 class="logo-text">4-H Zenith Club</h1>
           <p class="logo-subtitle">Head • Heart • Hands • Health</p>
         </div>
-      </div>
+      </a>
       <button
         class="nav-toggle"
         type="button"
@@ -89,13 +89,13 @@ window.addEventListener("resize", () => {
 footer.innerHTML = `
       <div class="footer-main">
         <div class="footer-brand">
-          <div class="logo-container">
+          <a class="logo-container" href="/">
             <img class="logo" src="/assets/images/4h-logo.png" alt="4-H Zenith Club Logo" />
             <div class="logo-text-container">
               <p class="logo-text">4-H Zenith Club</p>
               <p class="logo-subtitle">Head • Heart • Hands • Health</p>
             </div>
-          </div>
+          </a>
           <p class="footer-description">
             A community of homeschooling 4-H families growing together through
             hands-on projects, leadership, and service.

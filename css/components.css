@@ -298,6 +298,10 @@ th.card-value {
   --card-grid-min: var(--card-grid-min-large);
 }
 
+.card-grid.grid-xlarge {
+  --card-grid-min: var(--card-grid-min-xlarge);
+}
+
 .card-grid > li {
   display: flex;
   flex-direction: column;

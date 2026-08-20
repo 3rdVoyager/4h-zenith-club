@@ -57,3 +57,7 @@ strong {
   color: var(--section-accent);
   font-weight: 700;
 }
+
+a {
+  text-decoration: none;
+}
