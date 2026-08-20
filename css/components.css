@@ -286,6 +286,10 @@ th.card-value {
   text-align: left;
 }
 
+.card-grid.grid-xsmall {
+  --card-grid-min: var(--card-grid-min-xsmall);
+}
+
 .card-grid.grid-small {
   --card-grid-min: var(--card-grid-min-small);
 }

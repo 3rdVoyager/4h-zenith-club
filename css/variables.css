@@ -121,8 +121,9 @@
   --section-accent: var(--color-green-700);
   --card-bg: var(--color-cream-100);
   --card-border: rgba(20, 52, 1, 0.12);
-  --card-grid-min-small: 14rem;
-  --card-grid-min-normal: 20rem;
+  --card-grid-min-xsmall: 14rem;
+  --card-grid-min-small: 18rem;
+  --card-grid-min-normal: 24rem;
   --card-grid-min-large: 42rem;
   --card-grid-min-xlarge: 56rem;
   --gallery-paired-height: clamp(16rem, 28vw, 25rem);
