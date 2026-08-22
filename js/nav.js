@@ -24,6 +24,7 @@ header.innerHTML = `
           <li><a href="/about/">About</a></li>
           <li><a href="/meetings/">Meetings</a></li>
           <li><a href="/resources/">Resources</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
         <div class="header-actions">

@@ -286,6 +286,52 @@ th.card-value {
   }
 }
 
+/*
+  Auto row-fill grid (.auto)
+  --------------------------
+  Like .snap, but instead of jumping straight from --cols-max columns
+  to 1 column, it steps down through column counts that divide the
+  item count evenly, so every row stays full and nothing "hangs".
+
+  How it works:
+  - :nth-child(2n):last-child matches when the LAST item sits on an
+    even position, which means the item count is even (2, 4, 6...).
+    Two columns split those evenly: 2+2, 2+2+2, and so on.
+  - :nth-child(3n):last-child matches when the item count is a
+    multiple of 3 (3, 6, 9...), so 3 columns fill every row.
+  - :nth-child(4n):last-child is the same idea for multiples of 4.
+
+  The rules are ordered from fewest to most columns, so the largest
+  number that divides the item count wins (6 items matches both the
+    2-column and 3-column rules, but the 3-column rule comes later
+  and overrides). Column cap utilities (.cols-2, .cols-3, .cols-4)
+  are respected: each upgrade rule skips grids capped below it.
+
+  Counts that divide by nothing bigger (5 or 7 items) fall back to
+  2 columns on desktop, leaving at most one item on the last row.
+*/
+.layout-grid.auto {
+  grid-template-columns: 1fr; /* mobile: always one column */
+}
+
+@media (min-width: 769px) {
+  /* Step 1: two columns (default for any item count) */
+  .layout-grid.auto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Step 2: three columns when the count is a multiple of 3 */
+  .layout-grid.auto:not(.cols-2):has(> :nth-child(3n):last-child) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Step 3: four columns when the count is a multiple of 4
+     and the grid is explicitly allowed 4 columns */
+  .layout-grid.auto.cols-4:has(> :nth-child(4n):last-child) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Track density utilities */
 .cards-sm {
   --card-min: var(--card-min-sm);
