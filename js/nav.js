@@ -134,6 +134,6 @@ footer.innerHTML = `
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
+        <p>University programs, activities, and facilities are available to all without regard to race, color, sex, gender identity or expression, sexual orientation, marital status, age, national origin, political affiliation, physical or mental disability, religion, protected veteran status, genetic information, personal appearance, or any other legally protected class.<br><br>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
       </div>
     `;
