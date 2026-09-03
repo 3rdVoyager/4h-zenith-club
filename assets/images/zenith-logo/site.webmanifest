@@ -1,0 +1,21 @@
+{
+  "name": "4-H Zenith Club",
+  "short_name": "Zenith 4-H",
+  "icons": [
+    {
+      "src": "/assets/images/zenith-logo/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/zenith-logo/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#1c5135",
+  "background_color": "#f2efe4",
+  "display": "standalone"
+}

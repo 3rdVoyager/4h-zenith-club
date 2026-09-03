@@ -101,7 +101,7 @@ footer.innerHTML = `
             A community of homeschooling 4-H families growing together through
             hands-on projects, leadership, and service.
             <br><br>
-            <strong>Email:</strong> zenith.homeschooler.4hclub.md@gmail.com.
+            <strong>Email:</strong> contact@4hzenithclub.org.
           </p>
         </div>
 
