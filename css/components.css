@@ -78,6 +78,7 @@
 /* ── Content media (images, figures) ─────────────────────── */
 .content-media {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;

@@ -329,6 +329,7 @@ footer .footer-info li {
 
 footer .footer-bottom {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -340,6 +341,17 @@ footer .footer-bottom p {
   font-size: var(--text-small);
   color: var(--text-color-muted);
   text-align: center;
+}
+
+footer .university-branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+footer .university-branding img {
+  height: 75px;
 }
 
 @media (max-width: 960px) {

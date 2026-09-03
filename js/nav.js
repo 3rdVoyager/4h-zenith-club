@@ -134,6 +134,10 @@ footer.innerHTML = `
       </div>
 
       <div class="footer-bottom">
-        <p>University programs, activities, and facilities are available to all without regard to race, color, sex, gender identity or expression, sexual orientation, marital status, age, national origin, political affiliation, physical or mental disability, religion, protected veteran status, genetic information, personal appearance, or any other legally protected class.<br><br>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
+        <div class="university-branding">
+          <a href="https://extension.umd.edu/programs/4-h-youth-development/" target="_blank" rel="noopener"><img src="/assets/images/UMD_extension.png" alt="University of Maryland Logo" /></a>
+          <p>University programs, activities, and facilities are available to all without regard to race, color, sex, gender identity or expression, sexual orientation, marital status, age, national origin, political affiliation, physical or mental disability, religion, protected veteran status, genetic information, personal appearance, or any other legally protected class.
+        </div>
+        <p>&copy; 2026 4-H Zenith Club. All rights reserved.</p>
       </div>
     `;
