@@ -343,6 +343,10 @@ footer .footer-bottom p {
   text-align: center;
 }
 
+footer .footer-bottom > p {
+  margin-top: var(--space-md);
+}
+
 footer .university-branding {
   display: flex;
   justify-content: center;
@@ -367,5 +371,16 @@ footer .university-branding img {
 @media (max-width: 560px) {
   footer .footer-main {
     grid-template-columns: 1fr;
+  }
+
+  footer .university-branding {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .university-branding img {
+    width: min(100%, 26rem);
+    height: auto;
   }
 }
