@@ -140,8 +140,10 @@
 }
 
 .gallery__slide img {
-  width: 75%;
+  width: min(75%, 50rem);
+  max-height: 32rem;
   height: auto;
+  object-fit: contain;
 }
 
 /* Side-by-side galleries: match image height across columns (e.g. booth + banner) */
