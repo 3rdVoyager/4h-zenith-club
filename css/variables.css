@@ -78,12 +78,12 @@
   /* ── Layout ──────────────────────────────────────────── */
   --page-padding-x: 5vw;
   --page-padding-y: var(--space-md);
-  --section-padding-y: var(--space-xl);
-  --section-padding-x: var(--space-lg);
+  --section-padding-y: var(--space-md);
+  --section-padding-x: var(--space-md);
   --section-content-padding: var(--space-md);
   --section-grid-gap: var(--space-sm);
   --content-gap: var(--space-sm);
-  --header-padding: var(--space-sm);
+  --header-padding: var(--space-xs);
   --footer-padding-y: var(--space-xl);
   --footer-column-gap: var(--space-xl);
   --footer-logo-size: 3.5rem;
